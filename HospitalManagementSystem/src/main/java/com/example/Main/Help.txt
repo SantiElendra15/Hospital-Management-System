@@ -1,0 +1,11 @@
+To enable the request to get all the patients who are assigned with the doctor 
+I created the method public List<Patients> getAllDoctorPatients(int dId) in {Patients Service file}
+I added "List<Patients> findByDoctor_dId(int dId);" to {PatientsRepository} so that it generates the query automatically for the method
+I added the method with name "List<Patients> getAllDoctorPatients(int dId);" to {PatientsService}
+I implemented the method in {PatientsServiceImpl} by "@Override
+	public List<Patients> getAllDoctorPatients(int dId) {
+		// TODO Auto-generated method stub
+		return pr.findByDoctor_dId(dId);
+	}" .
+	
+And i mapped that in Controller 
